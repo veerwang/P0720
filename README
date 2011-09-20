@@ -1,1 +1,15 @@
-2011.09.19 终于创建了git仓库进入github网页中。
+Comment:
+The project be created to kill spare time in daily.
+
+File or directory introduce:
+1.    /bin
+      /src/Smart831/OBJS
+                   /DEPS
+		   main.cpp
+		   main.h
+		   ShellCommand.cpp
+		   ShellCommand.h
+           Makefile
+      /log/prolog
+      Makefile
+      README

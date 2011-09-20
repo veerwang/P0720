@@ -1,0 +1,167 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AR	Makefile	/^export AR := $(CROSS)ar$/;"	m	language:Make
+AS	Makefile	/^export AS := $(CROSS)as$/;"	m	language:Make
+Analyze	src/Smart831/shellcommand.cpp	/^ShellCommand::Analyze ( INT32 argc, CHAR* argv[] )$/;"	f	language:C++	class:ShellCommand	signature:( INT32 argc, CHAR* argv[] )
+Analyze	src/Smart831/shellcommand.h	/^	ShellCommand::SHELLCOMMAND Analyze ( INT32 argc, CHAR* argv[] );$/;"	p	language:C++	class:ShellCommand	access:public	signature:( INT32 argc, CHAR* argv[] )
+BGCOLOR	src/Smart831/graphic.h	/^	} BGCOLOR;$/;"	t	language:C++	class:Graphic	typeref:enum:Graphic::__anon3	access:public
+BLACK_BG	src/Smart831/graphic.h	/^		BLACK_BG 	= 	40,$/;"	e	language:C++	enum:Graphic::__anon3
+BLACK_FG	src/Smart831/graphic.h	/^		BLACK_FG 	= 	30,$/;"	e	language:C++	enum:Graphic::__anon2
+BLUE_BG	src/Smart831/graphic.h	/^		BLUE_BG 	= 	44,$/;"	e	language:C++	enum:Graphic::__anon3
+BLUE_FG	src/Smart831/graphic.h	/^		BLUE_FG 	= 	34,$/;"	e	language:C++	enum:Graphic::__anon2
+BOOL	src/Smart831/main.h	/^typedef bool                    BOOL;$/;"	t	language:C++
+CC	Makefile	/^export CC := $(CROSS)gcc$/;"	m	language:Make
+CHAR	src/Smart831/main.h	/^typedef char                    CHAR;$/;"	t	language:C++
+COMPILE	Makefile	/^export COMPILE  :=$/;"	m	language:Make
+CPP	Makefile	/^export CPP := $(CROSS)g++$/;"	m	language:Make
+CROSS	Makefile	/^	CROSS := \/opt\/host\/arm-kevin-linux-gnueabi\/bin\/arm-kevin-linux-gnueabi-$/;"	m	language:Make
+CROSS	Makefile	/^	CROSS := \/opt\/host\/arm41_new\/bin\/arm-unknown-linux-gnu-$/;"	m	language:Make
+CROSS	Makefile	/^	CROSS := \/opt\/host\/armv4l\/bin\/armv4l-unknown-linux-$/;"	m	language:Make
+CROSS	Makefile	/^	CROSS := \/opt\/host\/gcc-4.1.1-glibc-2.3.2\/arm-9tdmi-linux-gnu\/bin\/arm-9tdmi-linux-gnu-$/;"	m	language:Make
+CROSS	Makefile	/^	CROSS ?=$/;"	m	language:Make
+CROSS	Makefile	/^CROSS ?=$/;"	m	language:Make
+DEPS	src/Smart831/Makefile	/^DEPS:=$(SRCS:=.dep)$/;"	m	language:Make
+DEPS	src/Smart831/Makefile	/^DEPS:=$(addprefix $(DEPS_DIR),$(DEPS))$/;"	m	language:Make
+DEPS_DIR	src/Smart831/Makefile	/^DEPS_DIR:=.\/$(TXTDEPS)\/$/;"	m	language:Make
+DIR_NAME	Makefile	/^export DIR_NAME    := $(notdir $(MAKE_DIR))$/;"	m	language:Make
+DOUBLE	src/Smart831/main.h	/^typedef double                  DOUBLE;$/;"	t	language:C++
+EXEC	Makefile	/^export EXEC     := mytool$/;"	m	language:Make
+EXTF	src/Smart831/main.h	43;"	d	language:C++
+EXTF	src/Smart831/main.h	45;"	d	language:C++
+FGCOLOR	src/Smart831/graphic.h	/^	} FGCOLOR;$/;"	t	language:C++	class:Graphic	typeref:enum:Graphic::__anon2	access:public
+FLAG	Makefile	/^export FLAG := -lpthread -Wall$/;"	m	language:Make
+GREEN_BG	src/Smart831/graphic.h	/^		GREEN_BG 	= 	42,$/;"	e	language:C++	enum:Graphic::__anon3
+GREEN_FG	src/Smart831/graphic.h	/^		GREEN_FG 	= 	32,$/;"	e	language:C++	enum:Graphic::__anon2
+Graphic	src/Smart831/graphic.cpp	/^Graphic::Graphic () : m_fgcolor(WHITE_FG) , m_bgcolor(BLACK_BG) , m_width(80) ,$/;"	f	language:C++	class:Graphic	signature:()
+Graphic	src/Smart831/graphic.h	/^	Graphic ();                             \/* constructor *\/$/;"	p	language:C++	class:Graphic	access:public	signature:()
+Graphic	src/Smart831/graphic.h	/^class Graphic$/;"	c	language:C++
+Graphic::BGCOLOR	src/Smart831/graphic.h	/^	} BGCOLOR;$/;"	t	language:C++	class:Graphic	typeref:enum:Graphic::__anon3	access:public
+Graphic::BLACK_BG	src/Smart831/graphic.h	/^		BLACK_BG 	= 	40,$/;"	e	language:C++	enum:Graphic::__anon3
+Graphic::BLACK_FG	src/Smart831/graphic.h	/^		BLACK_FG 	= 	30,$/;"	e	language:C++	enum:Graphic::__anon2
+Graphic::BLUE_BG	src/Smart831/graphic.h	/^		BLUE_BG 	= 	44,$/;"	e	language:C++	enum:Graphic::__anon3
+Graphic::BLUE_FG	src/Smart831/graphic.h	/^		BLUE_FG 	= 	34,$/;"	e	language:C++	enum:Graphic::__anon2
+Graphic::FGCOLOR	src/Smart831/graphic.h	/^	} FGCOLOR;$/;"	t	language:C++	class:Graphic	typeref:enum:Graphic::__anon2	access:public
+Graphic::GREEN_BG	src/Smart831/graphic.h	/^		GREEN_BG 	= 	42,$/;"	e	language:C++	enum:Graphic::__anon3
+Graphic::GREEN_FG	src/Smart831/graphic.h	/^		GREEN_FG 	= 	32,$/;"	e	language:C++	enum:Graphic::__anon2
+Graphic::Graphic	src/Smart831/graphic.cpp	/^Graphic::Graphic () : m_fgcolor(WHITE_FG) , m_bgcolor(BLACK_BG) , m_width(80) ,$/;"	f	language:C++	class:Graphic	signature:()
+Graphic::Graphic	src/Smart831/graphic.h	/^	Graphic ();                             \/* constructor *\/$/;"	p	language:C++	class:Graphic	access:public	signature:()
+Graphic::LIGHTBLUE_BG	src/Smart831/graphic.h	/^		LIGHTBLUE_BG 	= 	46,$/;"	e	language:C++	enum:Graphic::__anon3
+Graphic::LIGHTBLUE_FG	src/Smart831/graphic.h	/^		LIGHTBLUE_FG 	= 	36,$/;"	e	language:C++	enum:Graphic::__anon2
+Graphic::PURPLE_BG	src/Smart831/graphic.h	/^		PURPLE_BG 	= 	45,$/;"	e	language:C++	enum:Graphic::__anon3
+Graphic::PURPLE_FG	src/Smart831/graphic.h	/^		PURPLE_FG 	= 	35,$/;"	e	language:C++	enum:Graphic::__anon2
+Graphic::RED_BG	src/Smart831/graphic.h	/^		RED_BG 	 	= 	41,$/;"	e	language:C++	enum:Graphic::__anon3
+Graphic::RED_FG	src/Smart831/graphic.h	/^		RED_FG 	 	= 	31,$/;"	e	language:C++	enum:Graphic::__anon2
+Graphic::WHITE_BG	src/Smart831/graphic.h	/^		WHITE_BG 	= 	47,$/;"	e	language:C++	enum:Graphic::__anon3
+Graphic::WHITE_FG	src/Smart831/graphic.h	/^		WHITE_FG 	= 	37,$/;"	e	language:C++	enum:Graphic::__anon2
+Graphic::YELLOW_BG	src/Smart831/graphic.h	/^		YELLOW_BG 	= 	43,$/;"	e	language:C++	enum:Graphic::__anon3
+Graphic::YELLOW_FG	src/Smart831/graphic.h	/^		YELLOW_FG 	= 	33,$/;"	e	language:C++	enum:Graphic::__anon2
+Graphic::disable_cursor	src/Smart831/graphic.cpp	/^Graphic::disable_cursor ( )$/;"	f	language:C++	class:Graphic	signature:( )
+Graphic::disable_cursor	src/Smart831/graphic.h	/^	void disable_cursor();$/;"	p	language:C++	class:Graphic	access:public	signature:()
+Graphic::enable_cursor	src/Smart831/graphic.cpp	/^Graphic::enable_cursor ( )$/;"	f	language:C++	class:Graphic	signature:( )
+Graphic::enable_cursor	src/Smart831/graphic.h	/^	void enable_cursor();$/;"	p	language:C++	class:Graphic	access:public	signature:()
+Graphic::init_module	src/Smart831/graphic.cpp	/^Graphic::init_module ( )$/;"	f	language:C++	class:Graphic	signature:( )
+Graphic::init_module	src/Smart831/graphic.h	/^	BOOL init_module();$/;"	p	language:C++	class:Graphic	access:public	signature:()
+Graphic::m_bgcolor	src/Smart831/graphic.h	/^	BGCOLOR			m_bgcolor;$/;"	m	language:C++	class:Graphic	access:private
+Graphic::m_bpp	src/Smart831/graphic.h	/^	size_t			m_bpp;$/;"	m	language:C++	class:Graphic	access:private
+Graphic::m_fgcolor	src/Smart831/graphic.h	/^	FGCOLOR			m_fgcolor;$/;"	m	language:C++	class:Graphic	access:private
+Graphic::m_height	src/Smart831/graphic.h	/^	size_t			m_height;$/;"	m	language:C++	class:Graphic	access:private
+Graphic::m_hscreen	src/Smart831/graphic.h	/^	INT32			m_hscreen;$/;"	m	language:C++	class:Graphic	access:private
+Graphic::m_ptrscr	src/Smart831/graphic.h	/^	UCHAR*			m_ptrscr;$/;"	m	language:C++	class:Graphic	access:private
+Graphic::m_width	src/Smart831/graphic.h	/^	size_t			m_width;$/;"	m	language:C++	class:Graphic	access:private
+Graphic::release_module	src/Smart831/graphic.cpp	/^Graphic::release_module ( )$/;"	f	language:C++	class:Graphic	signature:( )
+Graphic::release_module	src/Smart831/graphic.h	/^	void release_module();$/;"	p	language:C++	class:Graphic	access:public	signature:()
+Graphic::set_color	src/Smart831/graphic.cpp	/^Graphic::set_color ( FGCOLOR fg,BGCOLOR bg )$/;"	f	language:C++	class:Graphic	signature:( FGCOLOR fg,BGCOLOR bg )
+Graphic::set_color	src/Smart831/graphic.h	/^	void set_color(FGCOLOR fg,BGCOLOR bg);$/;"	p	language:C++	class:Graphic	access:public	signature:(FGCOLOR fg,BGCOLOR bg)
+Graphic::set_position	src/Smart831/graphic.cpp	/^Graphic::set_position ( size_t x,size_t y )$/;"	f	language:C++	class:Graphic	signature:( size_t x,size_t y )
+Graphic::set_position	src/Smart831/graphic.h	/^	void set_position(size_t x,size_t y);$/;"	p	language:C++	class:Graphic	access:public	signature:(size_t x,size_t y)
+Graphic::~Graphic	src/Smart831/graphic.cpp	/^Graphic::~Graphic ()$/;"	f	language:C++	class:Graphic	signature:()
+Graphic::~Graphic	src/Smart831/graphic.h	/^	~Graphic ();                            \/* destructor *\/$/;"	p	language:C++	class:Graphic	access:public	signature:()
+Help_Doc	src/Smart831/shellcommand.cpp	/^ShellCommand::Help_Doc ( void )$/;"	f	language:C++	class:ShellCommand	signature:( void )
+Help_Doc	src/Smart831/shellcommand.h	/^	void Help_Doc ();$/;"	p	language:C++	class:ShellCommand	access:private	signature:()
+INST_DIR	Makefile	/^export INST_DIR     := \/tftpboot\/$/;"	m	language:Make
+INST_NAME	Makefile	/^export INST_NAME    := main $/;"	m	language:Make
+INT16	src/Smart831/main.h	/^typedef short                   INT16;$/;"	t	language:C++
+INT32	src/Smart831/main.h	/^typedef int                     INT32;$/;"	t	language:C++
+INT64	src/Smart831/main.h	/^typedef long long               INT64;$/;"	t	language:C++
+INVALID	src/Smart831/shellcommand.h	/^		INVALID    = 	0, $/;"	e	language:C++	enum:ShellCommand::__anon1
+LIGHTBLUE_BG	src/Smart831/graphic.h	/^		LIGHTBLUE_BG 	= 	46,$/;"	e	language:C++	enum:Graphic::__anon3
+LIGHTBLUE_FG	src/Smart831/graphic.h	/^		LIGHTBLUE_FG 	= 	36,$/;"	e	language:C++	enum:Graphic::__anon2
+MAIN_INC	src/Smart831/main.h	20;"	d	language:C++
+MAKE_DIR	Makefile	/^export MAKE_DIR := $(PWD)$/;"	m	language:Make
+NORMAL	src/Smart831/shellcommand.h	/^		NORMAL     = 	1,$/;"	e	language:C++	enum:ShellCommand::__anon1
+OBJS	src/Smart831/Makefile	/^OBJS:=$(SRCS:=.o)$/;"	m	language:Make
+OBJS	src/Smart831/Makefile	/^OBJS:=$(addprefix $(OBJS_DIR),$(OBJS))$/;"	m	language:Make
+OBJS_DIR	src/Smart831/Makefile	/^OBJS_DIR:=.\/$(TXTOBJS)\/$/;"	m	language:Make
+PARENTS_DIR	Makefile	/^export PARENTS_DIR := $(dir $(MAKE_DIR))$/;"	m	language:Make
+PROJ	Makefile	/^export PROJ     := Smart831$/;"	m	language:Make
+PURPLE_BG	src/Smart831/graphic.h	/^		PURPLE_BG 	= 	45,$/;"	e	language:C++	enum:Graphic::__anon3
+PURPLE_FG	src/Smart831/graphic.h	/^		PURPLE_FG 	= 	35,$/;"	e	language:C++	enum:Graphic::__anon2
+RED_BG	src/Smart831/graphic.h	/^		RED_BG 	 	= 	41,$/;"	e	language:C++	enum:Graphic::__anon3
+RED_FG	src/Smart831/graphic.h	/^		RED_FG 	 	= 	31,$/;"	e	language:C++	enum:Graphic::__anon2
+RM	Makefile	/^export RM := rm$/;"	m	language:Make
+SHELLCOMMAND	src/Smart831/shellcommand.h	/^	} SHELLCOMMAND;$/;"	t	language:C++	class:ShellCommand	typeref:enum:ShellCommand::__anon1	access:public
+SRCS	src/Smart831/Makefile	/^SRCS:=$(wildcard *.cpp *.c *.s)$/;"	m	language:Make
+STRIP	Makefile	/^export STRIP := $(CROSS)strip$/;"	m	language:Make
+ShellCommand	src/Smart831/shellcommand.cpp	/^ShellCommand::ShellCommand (const CHAR* version)$/;"	f	language:C++	class:ShellCommand	signature:(const CHAR* version)
+ShellCommand	src/Smart831/shellcommand.h	/^	ShellCommand (const CHAR* version);          \/* constructor *\/$/;"	p	language:C++	class:ShellCommand	access:public	signature:(const CHAR* version)
+ShellCommand	src/Smart831/shellcommand.h	/^class ShellCommand$/;"	c	language:C++
+ShellCommand::Analyze	src/Smart831/shellcommand.cpp	/^ShellCommand::Analyze ( INT32 argc, CHAR* argv[] )$/;"	f	language:C++	class:ShellCommand	signature:( INT32 argc, CHAR* argv[] )
+ShellCommand::Analyze	src/Smart831/shellcommand.h	/^	ShellCommand::SHELLCOMMAND Analyze ( INT32 argc, CHAR* argv[] );$/;"	p	language:C++	class:ShellCommand	access:public	signature:( INT32 argc, CHAR* argv[] )
+ShellCommand::Help_Doc	src/Smart831/shellcommand.cpp	/^ShellCommand::Help_Doc ( void )$/;"	f	language:C++	class:ShellCommand	signature:( void )
+ShellCommand::Help_Doc	src/Smart831/shellcommand.h	/^	void Help_Doc ();$/;"	p	language:C++	class:ShellCommand	access:private	signature:()
+ShellCommand::INVALID	src/Smart831/shellcommand.h	/^		INVALID    = 	0, $/;"	e	language:C++	enum:ShellCommand::__anon1
+ShellCommand::NORMAL	src/Smart831/shellcommand.h	/^		NORMAL     = 	1,$/;"	e	language:C++	enum:ShellCommand::__anon1
+ShellCommand::SHELLCOMMAND	src/Smart831/shellcommand.h	/^	} SHELLCOMMAND;$/;"	t	language:C++	class:ShellCommand	typeref:enum:ShellCommand::__anon1	access:public
+ShellCommand::ShellCommand	src/Smart831/shellcommand.cpp	/^ShellCommand::ShellCommand (const CHAR* version)$/;"	f	language:C++	class:ShellCommand	signature:(const CHAR* version)
+ShellCommand::ShellCommand	src/Smart831/shellcommand.h	/^	ShellCommand (const CHAR* version);          \/* constructor *\/$/;"	p	language:C++	class:ShellCommand	access:public	signature:(const CHAR* version)
+ShellCommand::TEST	src/Smart831/shellcommand.h	/^		TEST       = 	99,$/;"	e	language:C++	enum:ShellCommand::__anon1
+ShellCommand::m_Version	src/Smart831/shellcommand.h	/^	CHAR* 		m_Version;$/;"	m	language:C++	class:ShellCommand	access:private
+ShellCommand::~ShellCommand	src/Smart831/shellcommand.cpp	/^ShellCommand::~ShellCommand ()$/;"	f	language:C++	class:ShellCommand	signature:()
+ShellCommand::~ShellCommand	src/Smart831/shellcommand.h	/^	~ShellCommand ();                            \/* destructor  *\/$/;"	p	language:C++	class:ShellCommand	access:public	signature:()
+TEST	src/Smart831/shellcommand.h	/^		TEST       = 	99,$/;"	e	language:C++	enum:ShellCommand::__anon1
+TXTDEPS	src/Smart831/Makefile	/^TXTDEPS:=DEPS$/;"	m	language:Make
+TXTOBJS	src/Smart831/Makefile	/^TXTOBJS:=OBJS$/;"	m	language:Make
+UCHAR	src/Smart831/main.h	/^typedef unsigned char  		UCHAR;$/;"	t	language:C++
+UINT16	src/Smart831/main.h	/^typedef unsigned short          UINT16;$/;"	t	language:C++
+UINT32	src/Smart831/main.h	/^typedef unsigned int            UINT32;$/;"	t	language:C++
+UINT64	src/Smart831/main.h	/^typedef unsigned long long      UINT64;$/;"	t	language:C++
+VERSION	src/Smart831/main.h	22;"	d	language:C++
+WHITE_BG	src/Smart831/graphic.h	/^		WHITE_BG 	= 	47,$/;"	e	language:C++	enum:Graphic::__anon3
+WHITE_FG	src/Smart831/graphic.h	/^		WHITE_FG 	= 	37,$/;"	e	language:C++	enum:Graphic::__anon2
+YELLOW_BG	src/Smart831/graphic.h	/^		YELLOW_BG 	= 	43,$/;"	e	language:C++	enum:Graphic::__anon3
+YELLOW_FG	src/Smart831/graphic.h	/^		YELLOW_FG 	= 	33,$/;"	e	language:C++	enum:Graphic::__anon2
+_GRAPHIC_INC	src/Smart831/graphic.h	20;"	d	language:C++
+_MAIN_FILE	src/Smart831/main.cpp	20;"	d	language:C++	file:
+_SHELLCOMMAND_INC	src/Smart831/shellcommand.h	20;"	d	language:C++
+disable_cursor	src/Smart831/graphic.cpp	/^Graphic::disable_cursor ( )$/;"	f	language:C++	class:Graphic	signature:( )
+disable_cursor	src/Smart831/graphic.h	/^	void disable_cursor();$/;"	p	language:C++	class:Graphic	access:public	signature:()
+enable_cursor	src/Smart831/graphic.cpp	/^Graphic::enable_cursor ( )$/;"	f	language:C++	class:Graphic	signature:( )
+enable_cursor	src/Smart831/graphic.h	/^	void enable_cursor();$/;"	p	language:C++	class:Graphic	access:public	signature:()
+g	src/Smart831/main.cpp	/^EXTF Graphic 	g;$/;"	v	language:C++
+init_module	src/Smart831/graphic.cpp	/^Graphic::init_module ( )$/;"	f	language:C++	class:Graphic	signature:( )
+init_module	src/Smart831/graphic.h	/^	BOOL init_module();$/;"	p	language:C++	class:Graphic	access:public	signature:()
+m_Version	src/Smart831/shellcommand.h	/^	CHAR* 		m_Version;$/;"	m	language:C++	class:ShellCommand	access:private
+m_bgcolor	src/Smart831/graphic.h	/^	BGCOLOR			m_bgcolor;$/;"	m	language:C++	class:Graphic	access:private
+m_bpp	src/Smart831/graphic.h	/^	size_t			m_bpp;$/;"	m	language:C++	class:Graphic	access:private
+m_fgcolor	src/Smart831/graphic.h	/^	FGCOLOR			m_fgcolor;$/;"	m	language:C++	class:Graphic	access:private
+m_height	src/Smart831/graphic.h	/^	size_t			m_height;$/;"	m	language:C++	class:Graphic	access:private
+m_hscreen	src/Smart831/graphic.h	/^	INT32			m_hscreen;$/;"	m	language:C++	class:Graphic	access:private
+m_ptrscr	src/Smart831/graphic.h	/^	UCHAR*			m_ptrscr;$/;"	m	language:C++	class:Graphic	access:private
+m_width	src/Smart831/graphic.h	/^	size_t			m_width;$/;"	m	language:C++	class:Graphic	access:private
+main	src/Smart831/main.cpp	/^main( int argc,char* argv[] )$/;"	f	language:C++	signature:( int argc,char* argv[] )
+make_command	Makefile	/^define make_command$/;"	m	language:Make
+release_module	src/Smart831/graphic.cpp	/^Graphic::release_module ( )$/;"	f	language:C++	class:Graphic	signature:( )
+release_module	src/Smart831/graphic.h	/^	void release_module();$/;"	p	language:C++	class:Graphic	access:public	signature:()
+set_color	src/Smart831/graphic.cpp	/^Graphic::set_color ( FGCOLOR fg,BGCOLOR bg )$/;"	f	language:C++	class:Graphic	signature:( FGCOLOR fg,BGCOLOR bg )
+set_color	src/Smart831/graphic.h	/^	void set_color(FGCOLOR fg,BGCOLOR bg);$/;"	p	language:C++	class:Graphic	access:public	signature:(FGCOLOR fg,BGCOLOR bg)
+set_position	src/Smart831/graphic.cpp	/^Graphic::set_position ( size_t x,size_t y )$/;"	f	language:C++	class:Graphic	signature:( size_t x,size_t y )
+set_position	src/Smart831/graphic.h	/^	void set_position(size_t x,size_t y);$/;"	p	language:C++	class:Graphic	access:public	signature:(size_t x,size_t y)
+standard_function	src/Smart831/main.cpp	/^standard_function()$/;"	f	language:C++	signature:()
+~Graphic	src/Smart831/graphic.cpp	/^Graphic::~Graphic ()$/;"	f	language:C++	class:Graphic	signature:()
+~Graphic	src/Smart831/graphic.h	/^	~Graphic ();                            \/* destructor *\/$/;"	p	language:C++	class:Graphic	access:public	signature:()
+~ShellCommand	src/Smart831/shellcommand.cpp	/^ShellCommand::~ShellCommand ()$/;"	f	language:C++	class:ShellCommand	signature:()
+~ShellCommand	src/Smart831/shellcommand.h	/^	~ShellCommand ();                            \/* destructor  *\/$/;"	p	language:C++	class:ShellCommand	access:public	signature:()
