@@ -44,7 +44,6 @@ typedef bool                    BOOL;
  *-----------------------------------------------------------------------------*/
 typedef unsigned int		COLORT;
 
-
 #ifdef _MAIN_FILE
 #define EXTF
 #else

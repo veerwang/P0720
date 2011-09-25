@@ -57,5 +57,4 @@ main( int argc,char* argv[] )
 	}
 	return EXIT_SUCCESS;
 }
-
 #endif   /* ----- #ifndef __MAIN_FILE  ----- */
