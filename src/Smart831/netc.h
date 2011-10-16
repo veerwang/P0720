@@ -18,20 +18,21 @@
 
 #ifndef  _NETC_INC
 #define  _NETC_INC
+
+#include	"netobj.h"
 /*
  * =====================================================================================
  *        Class:  Netc
  *  Description:  Manage Net client class 
  * =====================================================================================
  */
-class Netc
+class Netc : public Netobj
 {
 	public:
 		/* ====================  LIFECYCLE     ======================================= */
 		Netc ();                             /* constructor */
 		~Netc ();                            /* destructor */
 	protected:
-
 	private:
 }; /* -----  end of class Netc  ----- */
 #endif   /* ----- #ifndef _NETC_INC  ----- */

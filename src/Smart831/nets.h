@@ -18,13 +18,15 @@
 
 #ifndef  _NETS_INC
 #define  _NETS_INC
+
+#include	"netobj.h"
 /*
  * =====================================================================================
  *        Class:  Nets
  *  Description:  Manage Net Server 
  * =====================================================================================
  */
-class Nets
+class Nets : public Netobj
 {
 	public:
 		/* ====================  LIFECYCLE     ======================================= */
