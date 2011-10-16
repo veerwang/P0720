@@ -32,6 +32,8 @@ class ShellCommand
 	typedef enum {
 		INVALID    = 	0, 
 		NORMAL     = 	1,
+		CLIENT	   =    2,
+		SERVER	   =    3,
 		TEST       = 	99,
 	} SHELLCOMMAND;
 
