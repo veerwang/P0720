@@ -31,7 +31,7 @@ class Global
 	public:
 		/* ====================  LIFECYCLE     ======================================= */
 		Global ();                             /* constructor */
-		~Global ();                            /* destructor */
+		~Global ();                            /* destructor  */
 
 		void init_default_value();
 		BOOL save_value();
@@ -39,6 +39,5 @@ class Global
 	protected:
 
 	private:
-
 }; /* -----  end of class Global  ----- */
 #endif   /* ----- #ifndef _GLOBAL_INC  ----- */

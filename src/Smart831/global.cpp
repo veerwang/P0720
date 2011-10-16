@@ -35,7 +35,7 @@ Global::~Global ()
 /* 
  * ===  FUNCTION  ======================================================================
  *         Name:  init_default_value
- *  Description:  
+ *  Description:  Give default value for each variables of protect 
  * =====================================================================================
  */
 void Global::init_default_value()
@@ -47,7 +47,7 @@ void Global::init_default_value()
 /* 
  * ===  FUNCTION  ======================================================================
  *         Name:  load_value
- *  Description:  
+ *  Description:  load vale from disk for each variables 
  * =====================================================================================
  */
 BOOL Global::load_value()
@@ -56,14 +56,14 @@ BOOL Global::load_value()
 
 }
 
-
 /* 
  * ===  FUNCTION  ======================================================================
  *         Name:  save_value
- *  Description:  
+ *  Description:  save variables value into disk 
  * =====================================================================================
  */
 BOOL Global::save_value()
 {
+
 
 }

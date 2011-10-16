@@ -99,7 +99,5 @@ class Graphic
 	INT32			m_height;
 	INT32			m_bpp;
 	UCHAR*			m_ptrscr;
-
-
 }; /* -----  end of class Graphic  ----- */
 #endif   /* ----- #ifndef _GRAPHIC_INC  ----- */

@@ -20,10 +20,12 @@
 #define  _MAIN_FILE
 
 #include	"main.h"
+#include 	"global.h"
 #include	"shellcommand.h"
 #include	"graphic.h"
 
 EXTF Graphic 	g;
+EXTF Global	global;
 
 /* 
  * ===  FUNCTION  ======================================================================
@@ -36,7 +38,8 @@ standard_function()
 {
 	g.init_module();
 	g.show_fb_msg();
-	g.setpixel(200,200,0xffffffff);
+	g.setpixel(200,200,0xffffff00);
+	g.setpixel(200,201,0xffffEf00);
 	g.release_module();
 }
 
