@@ -24,6 +24,7 @@
  *-----------------------------------------------------------------------------*/
 #include 	<sys/types.h>
 #include        <sys/socket.h>
+#include        <sys/ioctl.h>
 #include        <netinet/in.h>
 #include        <arpa/inet.h>
 #include        <vector>
@@ -49,24 +50,24 @@ class Netobj
 		/*-----------------------------------------------------------------------------
 		 *  socket operation sets
 		 *-----------------------------------------------------------------------------*/
-		BOOL	init_socket();
-		void 	close_socket();
+		virtual BOOL	set_socket_opt();
+		BOOL		init_socket();
+		void 		close_socket();
 		/*-----------------------------------------------------------------------------
 		 *  port operation
 		 *-----------------------------------------------------------------------------*/
-		void 	set_port(INT32 port);
+		void 	set_port(INT32 port,BOOL enable=false);
 		INT32 	get_port(void);
 		/*-----------------------------------------------------------------------------
 		 *  ip addr operation
 		 *-----------------------------------------------------------------------------*/
-		void 	set_ip(const CHAR *);
+		BOOL 	set_ip(const CHAR *,BOOL enbale=false);
 		void	get_ip(CHAR*);
 	protected:
-		struct sockaddr_in 		     m_ipaddr;
+		struct  sockaddr_in 		     m_ipaddr;
 		INT32 				     m_socketfd;
-
 		UINT32				     m_port;
-		CHAR				     m_ip[30];
+		CHAR				     m_strip[30];
 	private:
 
 }; /* -----  end of class Netobj  ----- */

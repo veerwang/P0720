@@ -32,6 +32,8 @@ class Netc : public Netobj
 		/* ====================  LIFECYCLE     ======================================= */
 		Netc ();                             /* constructor */
 		~Netc ();                            /* destructor */
+		virtual BOOL set_socket_opt();
+		BOOL	connect_server();
 	protected:
 	private:
 }; /* -----  end of class Netc  ----- */

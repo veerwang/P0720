@@ -29,15 +29,31 @@
 class Nets : public Netobj
 {
 	public:
+		typedef enum {
+			NETMSG_NONE = 1,
+			NETMSG_ERROR,
+			NETMSG_DATA,
+			NETMSG_BUFOV,
+			NETMSG_CLIENTADD,
+			NETMSG_CLIENTREL,
+			NETMSG_CLIENTBECLOSED
+		} NETMSG;
+	public:
 		/* ====================  LIFECYCLE     ======================================= */
 		Nets ();                             /* constructor */
 		~Nets ();                            /* destructor */
-
+		BOOL start_listen();
+		void shutdown_server();
+		NETMSG loop_socket_event();
+		virtual BOOL set_socket_opt();
 	protected:
 		/* ====================  DATA MEMBERS  ======================================= */
 
 	private:
 		/* ====================  DATA MEMBERS  ======================================= */
-
+		static const UINT32		m_MAXlistencount = 5;
+		fd_set 				readfds;
+		fd_set 				testfds;
+		struct timeval 			m_Timeval;
 }; /* -----  end of class Nets  ----- */
 #endif   /* ----- #ifndef _NETS_INC  ----- */
