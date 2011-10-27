@@ -26,6 +26,7 @@
  */
 Netc::Netc ()
 {
+	sprintf(m_strserverip,"%s","192.168.1.1");
 }  /* -----  end of method Netc::Netc  (constructor)  ----- */
 
 Netc::~Netc ()
@@ -61,11 +62,31 @@ BOOL Netc::set_socket_opt()
  */
 BOOL Netc::connect_server()
 {
-/* 	BOOL flag = false;
- * 	if ( connect(m_socketfd,(struct sockaddr*)&m_Remote,sizeof(m_Remote)) != 0 )
- * 		flag = false;
- * 	else
- * 		flag = true;
- * 	return flag;
+	BOOL flag = false;
+	if ( connect(m_socketfd,(struct sockaddr*)&m_serveripaddr,sizeof(m_serveripaddr)) != 0 )
+		flag = false;
+	else
+		flag = true;
+	return flag;
+
+}
+
+/* 
+ * ===  FUNCTION  ======================================================================
+ *         Name:  set_server_ip
+ *  Description:  set the ip addr of socket 
+ * =====================================================================================
  */
+BOOL 	Netc::set_server_ip(const CHAR* ip,BOOL enable)
+{
+	sprintf(m_strserverip,"%s",ip);
+
+	if ( enable == false ) return true;
+
+	if ( inet_aton(m_strserverip,(struct in_addr *)&m_serveripaddr.sin_addr.s_addr) == 0 )
+	{
+		perror("Can't init server IP"); return false;
+	}
+	else
+		return true;
 }

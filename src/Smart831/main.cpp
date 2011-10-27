@@ -55,7 +55,7 @@ server_function()
 {
 	Nets server;
 	server.set_port(5300);
-	server.set_ip("192.168.1.101");
+	server.set_ip("192.168.1.1");
 	server.start_listen();
 
 	printf ( "%d\n",server.loop_socket_event() );
@@ -73,6 +73,10 @@ server_function()
 client_function()
 {
 	Netc client;
+	client.set_port(5300);
+	client.set_ip("192.168.1.101");
+	client.set_server_ip("192.168.1.1",true);
+	client.connect_server();
 }
 
 /* 
