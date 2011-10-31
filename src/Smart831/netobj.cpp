@@ -141,3 +141,25 @@ BOOL	Netobj::set_socket_opt()
 	}
 	return true;
 }
+
+/* 
+ * ===  FUNCTION  ======================================================================
+ *         Name:  get_data
+ *  Description:  Recieve data from socket 
+ * =====================================================================================
+ */
+INT32 	Netobj::get_data(CHAR* data,INT32 len)
+{
+	return recv(m_socketfd,data,len,0);
+}
+
+/* 
+ * ===  FUNCTION  ======================================================================
+ *         Name:  send_data
+ *  Description:  Push data into socket 
+ * =====================================================================================
+ */
+void 	Netobj::send_data(CHAR* data,INT32 len)
+{
+	send(m_socketfd,data,len,0);
+}

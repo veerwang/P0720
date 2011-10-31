@@ -54,15 +54,20 @@ class Netobj
 		BOOL		init_socket();
 		void 		close_socket();
 		/*-----------------------------------------------------------------------------
+		 *  socket data functions  
+		 *-----------------------------------------------------------------------------*/
+		INT32		get_data(CHAR* data,INT32 len);
+		void		send_data(CHAR* data,INT32 len);
+		/*-----------------------------------------------------------------------------
 		 *  port operation
 		 *-----------------------------------------------------------------------------*/
-		void 	set_port(INT32 port,BOOL enable=false);
-		INT32 	get_port(void);
+		void 		set_port(INT32 port,BOOL enable=false);
+		INT32 		get_port(void);
 		/*-----------------------------------------------------------------------------
 		 *  ip addr operation
 		 *-----------------------------------------------------------------------------*/
-		BOOL 	set_ip(const CHAR *,BOOL enbale=false);
-		void	get_ip(CHAR*);
+		BOOL 		set_ip(const CHAR *,BOOL enbale=false);
+		void		get_ip(CHAR*);
 	protected:
 		struct  sockaddr_in 		     m_ipaddr;
 		INT32 				     m_socketfd;

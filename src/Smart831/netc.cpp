@@ -27,6 +27,9 @@
 Netc::Netc ()
 {
 	sprintf(m_strserverip,"%s","192.168.1.1");
+	m_tv.tv_sec  = 0;
+	m_tv.tv_usec = 1;
+
 }  /* -----  end of method Netc::Netc  (constructor)  ----- */
 
 Netc::~Netc ()
@@ -41,16 +44,20 @@ Netc::~Netc ()
  */
 BOOL Netc::set_socket_opt()
 {
-	struct timeval tv;
-	tv.tv_sec  = 0;
-	tv.tv_usec = 1;
-
-	if ( setsockopt(m_socketfd,SOL_SOCKET,SO_RCVTIMEO,(CHAR *)&tv,sizeof(struct timeval)) == -1 )
+	if ( setsockopt(m_socketfd,SOL_SOCKET,SO_RCVTIMEO,(CHAR *)&m_tv,sizeof(struct timeval)) == -1 )
 	{
 		perror("Set Sockopt error");
 		close_socket();
 		return false;
 	}
+
+	if ( bind(m_socketfd,(struct sockaddr *)&m_ipaddr,sizeof(struct sockaddr) ) == -1 )
+	{
+		perror("Can't bind");
+		close(m_socketfd);
+		return false;
+	}
+
 	return true;
 }
 
@@ -89,4 +96,33 @@ BOOL 	Netc::set_server_ip(const CHAR* ip,BOOL enable)
 	}
 	else
 		return true;
+}
+
+/* 
+ * ===  FUNCTION  ======================================================================
+ *         Name:  poll_socket_status
+ *  Description:  
+ * =====================================================================================
+ */
+Netc::NETSTA  Netc::poll_socket_status()
+{
+	INT32 ret;
+	fd_set rdfds;
+	FD_ZERO(&rdfds);
+	FD_SET(m_socketfd,&rdfds);
+	ret = select(m_socketfd+1,&rdfds,NULL,NULL,&m_tv);
+
+	if ( ret <= 0 )
+		return Netc::NETNONE;
+	else
+	{
+		if ( !FD_ISSET(m_socketfd,&rdfds) )
+		{
+			return Netc::NETNONE;
+		}
+		else
+		{
+			return Netc::DATAIN;
+		}
+	}
 }
