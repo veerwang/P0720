@@ -29,9 +29,8 @@
 class Netc : public Netobj
 {
 	public:
-		/* ====================  LIFECYCLE     ======================================= */
 		enum NETSTA { 
-				NETNONE  = 0,
+			    	NETNONE  = 0,
 			      	DATAIN   = 1 
 		            };
 		Netc ();                             /* constructor */
