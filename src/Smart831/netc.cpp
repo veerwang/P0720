@@ -43,10 +43,6 @@ Netc::~Netc ()
  */
 BOOL Netc::set_socket_opt()
 {
-	struct timeval tv;
-	tv.tv_sec  = 0;
-	tv.tv_usec = 1;
-
 	INT32 on = 1;                           /* Enable the Port can't be reused */
 	if ( setsockopt(m_socketfd,SOL_SOCKET,SO_REUSEADDR,&on,sizeof(on)) == -1 )
 	{
@@ -54,7 +50,7 @@ BOOL Netc::set_socket_opt()
 		close_socket();
 		return false;
 	}
-	if ( setsockopt(m_socketfd,SOL_SOCKET,SO_RCVTIMEO,(CHAR *)&tv,sizeof(struct timeval)) == -1 )
+	if ( setsockopt(m_socketfd,SOL_SOCKET,SO_RCVTIMEO,(CHAR *)&m_tv,sizeof(struct timeval)) == -1 )
 	{
 		perror("Set Sockopt error");
 		close_socket();
