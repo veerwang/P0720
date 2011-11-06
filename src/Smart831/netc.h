@@ -30,14 +30,20 @@ class Netc : public Netobj
 {
 	public:
 		/* ====================  LIFECYCLE     ======================================= */
+		enum NETSTA { 
+				NETNONE  = 0,
+			      	DATAIN   = 1 
+		            };
 		Netc ();                             /* constructor */
 		~Netc ();                            /* destructor */
 		virtual BOOL set_socket_opt();
 		BOOL	connect_server();
 		BOOL 	set_server_ip(const CHAR* ip,BOOL enable);
+		NETSTA  poll_socket_status();
 	protected:
 	private:
 		struct  sockaddr_in 		     m_serveripaddr;
 		CHAR				     m_strserverip[30];
+		struct timeval          	     m_tv;
 }; /* -----  end of class Netc  ----- */
 #endif   /* ----- #ifndef _NETC_INC  ----- */

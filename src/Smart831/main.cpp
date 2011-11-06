@@ -55,13 +55,28 @@ server_function()
 {
 	Nets server;
 	server.set_port(5300);
-	server.set_ip("192.168.1.1");
+	server.set_ip("192.168.1.101");
 	server.start_listen();
 
-	printf ( "%d\n",server.loop_socket_event() );
+/* 	printf ( "%d\n",server.loop_socket_event() );
+ */
 
+	while( 1 )
+	{
+		if ( server.loop_socket_event() == Nets::NETMSG_CLIENTADD )
+		{
+			printf("client connect!");
+		}
+		else if ( server.loop_socket_event() == Nets::NETMSG_CLIENTREL )
+		{
+			printf("client release!");
+			goto Exit;
+		}
+	}
+Exit:
 	server.shutdown_server();
 }
+
 
 /* 
  * ===  FUNCTION  ======================================================================
@@ -73,10 +88,17 @@ server_function()
 client_function()
 {
 	Netc client;
-	client.set_port(5300);
-	client.set_ip("192.168.1.101");
-	client.set_server_ip("192.168.1.1",true);
-	client.connect_server();
+	client.set_ip("192.168.1.101",true);
+	client.init_socket();
+	client.set_port(5300,true);
+	client.set_server_ip("192.168.1.101",true);
+	client.set_socket_opt();
+	while( !client.connect_server() )
+	{
+		printf ( "connecting\n" );
+		usleep(500000);
+	}
+	client.close_socket();
 }
 
 /* 
