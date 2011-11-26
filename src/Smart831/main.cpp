@@ -25,6 +25,7 @@
 #include	"graphic.h"
 #include	"netc.h"
 #include	"nets.h"
+#include	"basicio.h"
 
 EXTF Graphic 	g;
 EXTF Global	global;
@@ -123,6 +124,11 @@ main( int argc,char* argv[] )
 	else if ( result == ShellCommand::CLIENT )
 	{
 		client_function();
+	}
+	else if ( result == ShellCommand::TEST )
+	{
+		Basicio basicio;
+		basicio.test();
 	}
 	return EXIT_SUCCESS;
 }
