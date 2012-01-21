@@ -34,7 +34,7 @@ class Netc : public Netobj
 			      	DATAIN   = 1 
 		            };
 		Netc ();                             /* constructor */
-		~Netc ();                            /* destructor */
+		~Netc ();                            /* destructor  */
 		virtual BOOL set_socket_opt();
 		BOOL	connect_server();
 		BOOL 	set_server_ip(const CHAR* ip,BOOL enable);
@@ -44,5 +44,6 @@ class Netc : public Netobj
 		struct  sockaddr_in 		     m_serveripaddr;
 		CHAR				     m_strserverip[30];
 		struct timeval          	     m_tv;
+		fd_set 				     m_rdfds;
 }; /* -----  end of class Netc  ----- */
 #endif   /* ----- #ifndef _NETC_INC  ----- */

@@ -106,15 +106,14 @@ BOOL 	Netc::set_server_ip(const CHAR* ip,BOOL enable)
 Netc::NETSTA  Netc::poll_socket_status()
 {
 	INT32 ret;
-	fd_set rdfds;
-	FD_ZERO(&rdfds);
-	FD_SET(m_socketfd,&rdfds);
-	ret = select(m_socketfd+1,&rdfds,NULL,NULL,&m_tv);
+	FD_ZERO(&m_rdfds);
+	FD_SET(m_socketfd,&m_rdfds);
+	ret = select(m_socketfd+1,&m_rdfds,NULL,NULL,&m_tv);
 	if ( ret <= 0 )
 		return Netc::NETNONE;
 	else
 	{
-		if ( !FD_ISSET(m_socketfd,&rdfds) )
+		if ( !FD_ISSET(m_socketfd,&m_rdfds) )
 			return Netc::NETNONE;
 		else
 			return Netc::DATAIN;

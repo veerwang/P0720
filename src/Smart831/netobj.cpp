@@ -27,6 +27,8 @@
 Netobj::Netobj () : m_port(5300) , m_socketfd(-1)
 {
 	sprintf(m_strip,"%s","192.168.1.120");
+	m_wrtv.tv_sec  = 0;
+	m_wrtv.tv_usec = 1;
 }  /* -----  end of method Netobj::Netobj  (constructor)  ----- */
 
 Netobj::~Netobj ()
@@ -162,7 +164,24 @@ INT32 	Netobj::get_data(CHAR* data,INT32 len)
  *  Description:  Push data into socket 
  * =====================================================================================
  */
-void 	Netobj::send_data(CHAR* data,INT32 len)
+BOOL 	Netobj::send_data(CHAR* data,INT32 len)
 {
-	send(m_socketfd,data,len,0);
+	FD_ZERO(&m_wrfds);
+	FD_SET(m_socketfd,&m_wrfds);
+	if ( select(m_socketfd+1,NULL,&m_wrfds,NULL,&m_wrtv) <= 0 )
+		return false;
+	else
+	{
+		if ( !FD_ISSET(m_socketfd,&m_wrfds) )
+			return false; 
+		else
+		{
+			if ( send(m_socketfd,data,len,0) != len )
+			{
+				return false;
+			}
+			else
+				return true;
+		}
+	}
 }

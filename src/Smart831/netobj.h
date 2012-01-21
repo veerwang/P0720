@@ -57,7 +57,7 @@ class Netobj
 		 *  socket data functions  
 		 *-----------------------------------------------------------------------------*/
 		INT32		get_data(CHAR* data,INT32 len);
-		void		send_data(CHAR* data,INT32 len);
+		BOOL		send_data(CHAR* data,INT32 len);
 		/*-----------------------------------------------------------------------------
 		 *  port operation
 		 *-----------------------------------------------------------------------------*/
@@ -74,6 +74,7 @@ class Netobj
 		UINT32				     m_port;
 		CHAR				     m_strip[30];
 	private:
-
+		fd_set				     m_wrfds;
+		struct timeval          	     m_wrtv;
 }; /* -----  end of class Netobj  ----- */
 #endif   /* ----- #ifndef _NETOBJ_INC  ----- */
