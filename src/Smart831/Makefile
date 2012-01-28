@@ -53,10 +53,10 @@ $(addprefix $(OBJS_DIR),%.s.o): %.s
 	$(AS) $< -o $@
 
 $(addprefix $(OBJS_DIR),%.c.o): %.c
-	$(CC) -O2 -c $< -o $@
+	$(CC) -Wall -O2 -c $< -o $@
 
 $(addprefix $(OBJS_DIR),%.cpp.o): %.cpp
-	$(CPP) -O2 -c $< -o $@
+	$(CPP) -Wall -O2 -c $< -o $@
 
 
 

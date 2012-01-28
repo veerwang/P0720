@@ -26,9 +26,13 @@
 
 #include	"graphic.h"
 
-Graphic::Graphic () : m_fgcolor(WHITE_FG) , m_bgcolor(BLACK_BG) , m_width(80) ,
-	              m_height(25) , m_hscreen(-1) , m_bpp(8) , m_ptrscr(NULL)
+Graphic::Graphic () : m_fgcolor(WHITE_FG) , m_bgcolor(BLACK_BG)
 {
+	m_width 	= 80;
+       	m_height	= 25;
+	m_hscreen	= -1;
+	m_bpp 	 	= 8;
+	m_ptrscr 	= NULL;
 }  /* -----  end of method Graphic::Graphic  (constructor)  ----- */
 
 Graphic::~Graphic ()

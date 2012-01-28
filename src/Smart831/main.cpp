@@ -19,6 +19,8 @@
 #ifndef  _MAIN_FILE
 #define  _MAIN_FILE
 
+#include	<linux/sched.h>
+
 #include	"main.h"
 #include 	"global.h"
 #include	"shellcommand.h"
@@ -58,9 +60,6 @@ server_function()
 	server.set_port(5300);
 	server.set_ip("192.168.1.101");
 	server.start_listen();
-
-/* 	printf ( "%d\n",server.loop_socket_event() );
- */
 
 	while( 1 )
 	{

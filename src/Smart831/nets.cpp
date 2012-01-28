@@ -138,6 +138,5 @@ Nets::NETMSG Nets::loop_socket_event()
  */
 BOOL Nets::set_socket_opt()
 {
-
-
+	return false;
 }

@@ -24,11 +24,13 @@
  * Description:  constructor
  *--------------------------------------------------------------------------------------
  */
-Netobj::Netobj () : m_port(5300) , m_socketfd(-1)
+Netobj::Netobj () 
 {
+	m_port 		= 5300;  
+	m_socketfd 	= -1;
 	sprintf(m_strip,"%s","192.168.1.120");
-	m_wrtv.tv_sec  = 0;
-	m_wrtv.tv_usec = 1;
+	m_wrtv.tv_sec   = 0;
+	m_wrtv.tv_usec  = 1;
 }  /* -----  end of method Netobj::Netobj  (constructor)  ----- */
 
 Netobj::~Netobj ()
@@ -144,7 +146,8 @@ BOOL	Netobj::set_socket_opt()
 		close_socket();
 		return false;
 	}
-	return true;
+	else
+		return true;
 }
 
 /* 

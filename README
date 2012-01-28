@@ -6,9 +6,22 @@ File or directory introduce:
 1.    /bin
       /src/Smart831/OBJS
                    /DEPS
+		   Makefile
+		   basicio.cpp
+		   global.cpp
+		   graphic.cpp
 		   main.cpp
+		   netc.cpp
+		   netobj.cpp
 		   main.h
 		   ShellCommand.cpp
+		   basicio.h
+		   global.h
+		   graphic.h
+		   main.h
+		   netc.h
+		   netobj.h
+		   nets.h
 		   ShellCommand.h
            Makefile
       /log/prolog

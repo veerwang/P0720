@@ -52,8 +52,7 @@ void Global::init_default_value()
  */
 BOOL Global::load_value()
 {
-
-
+	return false;
 }
 
 /* 
@@ -64,6 +63,5 @@ BOOL Global::load_value()
  */
 BOOL Global::save_value()
 {
-
-
+	return false;
 }

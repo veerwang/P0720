@@ -95,8 +95,8 @@ class Graphic
 	 *  frame buffer used functions sets
 	 *-----------------------------------------------------------------------------*/
 	INT32			m_hscreen;
-	INT32			m_width;
 	INT32			m_height;
+	INT32			m_width;
 	INT32			m_bpp;
 	UCHAR*			m_ptrscr;
 }; /* -----  end of class Graphic  ----- */

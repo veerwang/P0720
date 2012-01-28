@@ -62,7 +62,7 @@ BOOL Netc::set_socket_opt()
 /* 
  * ===  FUNCTION  ======================================================================
  *         Name:  connect_server
- *  Description:  
+ *  Description:  Connect to the server device  
  * =====================================================================================
  */
 BOOL Netc::connect_server()
@@ -73,7 +73,6 @@ BOOL Netc::connect_server()
 	else
 		flag = true;
 	return flag;
-
 }
 
 /* 
